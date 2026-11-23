@@ -7,17 +7,19 @@ Serrano as a comparative notebook study of fake-news classification methods.
 
 ## Contents
 
-- `NLPSergio_Daniel.ipynb` — the complete analysis, experiments, explanations,
-  and saved outputs.
-- `requirements.txt` — the Python packages imported by the notebook.
+- [`coursework/nlp/fake-news-classification/NLPSergio_Daniel.ipynb`](coursework/nlp/fake-news-classification/NLPSergio_Daniel.ipynb)
+  — the complete analysis, experiments, explanations, and saved outputs.
+- [`coursework/nlp/fake-news-classification/requirements.txt`](coursework/nlp/fake-news-classification/requirements.txt)
+  — the Python packages imported by the notebook.
 
-The notebook expects two input files in its working directory:
+The notebook expects two input files in its working directory
+(`coursework/nlp/fake-news-classification/`):
 
 - `fake.csv` — articles labelled as fake
 - `true.csv` — articles labelled as true
 
-These dataset files are not included in this repository, so the experiments
-cannot be rerun from a fresh clone without obtaining them separately.
+These external dataset files are not included in this repository. Obtain them
+separately and place them beside the notebook before rerunning the experiments.
 
 ## Methods
 
@@ -56,11 +58,14 @@ production benchmark or a guarantee of performance on new sources of news.
 1. Install the dependencies:
 
    ```bash
-   python -m pip install -r requirements.txt
+   python -m pip install -r coursework/nlp/fake-news-classification/requirements.txt
    ```
 
-2. Place `fake.csv` and `true.csv` beside the notebook.
-3. Open `NLPSergio_Daniel.ipynb` in Jupyter or Google Colab and run the cells.
+2. Place the external `fake.csv` and `true.csv` files in
+   `coursework/nlp/fake-news-classification/`.
+3. From that directory, open `NLPSergio_Daniel.ipynb` in Jupyter or Google
+   Colab and run the cells. The relative CSV paths require the notebook's
+   working directory to be that directory.
 
 The notebook records a random seed for the scikit-learn splits. Neural-network
 training may still vary between environments because complete TensorFlow
